@@ -7,6 +7,9 @@ package com.revature;
  everything written between the slash * will be commented out 
 */
 
+//java provides this import by default. 
+import java.lang.*;
+
 public class Driver {
 	
 	//This is a class scoped variable. This variable is initialized with the value 5. 
