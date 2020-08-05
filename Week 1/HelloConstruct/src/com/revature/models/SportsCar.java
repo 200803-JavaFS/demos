@@ -16,4 +16,8 @@ public class SportsCar extends Car{
 		System.out.println("Woooooh I can drive fast");
 	}
 	
+	public static void honk() {
+		System.out.println("BEEP BEEP");
+	}
+	
 }
