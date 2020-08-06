@@ -23,6 +23,7 @@ public class Driver {
 		 */
 		try {
 			emp1.join(); // Waiting for emp1 to finish its execution
+			
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
