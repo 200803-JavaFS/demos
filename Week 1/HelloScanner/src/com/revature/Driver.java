@@ -21,7 +21,7 @@ public class Driver {
 		System.out.println("Wow you look younger than "+age+"!");
 		
 		//It is best close your input classes. However, System.in's Scanner can only be "opened" once so after it is closed
-		//you love access to more imput. Meaning you should only close the scanner when you are sure your program is done with it.
+		//you love access to more input. Meaning you should only close the scanner when you are sure your program is done with it.
 		
 		scan.close();
 	}
