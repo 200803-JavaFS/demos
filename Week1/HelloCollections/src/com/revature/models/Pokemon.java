@@ -1,6 +1,6 @@
 package com.revature.models;
 
-public class Pokemon {
+public class Pokemon {//implements Comparable<Pokemon>{
 	
 	public int number;
 	public String name;
@@ -60,7 +60,15 @@ public class Pokemon {
 	@Override
 	public String toString() {
 		return "Pokemon [number=" + number + ", name=" + name + ", type=" + type + "]";
-	} 
+	}
+
+
+
+	/*
+	 * @Override public int compareTo(Pokemon p) { int i =
+	 * this.name.toLowerCase().compareTo(p.name.toLowerCase());
+	 * System.out.println("The comparison is returning "+i); return i; }
+	 */
 	
 	
 
