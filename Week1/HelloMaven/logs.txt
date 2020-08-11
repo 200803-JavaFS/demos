@@ -1,0 +1,6 @@
+2020-08-11 11:32:53 INFO  Driver:12 - The application has started
+2020-08-11 11:32:53 ERROR Driver:18 - Oh no! We encountered an error!
+2020-08-11 11:32:53 INFO  Driver:21 - The application is ending
+2020-08-11 11:33:28 INFO  Driver:12 - The application has started
+2020-08-11 11:33:28 ERROR Driver:18 - Oh no! We encountered an error!
+2020-08-11 11:33:28 INFO  Driver:21 - The application is ending
