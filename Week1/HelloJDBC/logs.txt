@@ -5,3 +5,4 @@
 2020-08-13 16:50:32 INFO  AvengerService:36 - Inserting Avenger: Avenger [supId=0, supName=Black Widow, supPower=Being Russian, firstName=Natasha, lastName=Romanov, powerLevel=9000, homeBase=null]
 2020-08-13 16:50:43 INFO  AvengerService:18 - Retrieving all avengers
 2020-08-13 16:56:24 INFO  AvengerService:18 - Retrieving all avengers
+2020-08-13 17:26:09 INFO  AvengerService:65 - Inserting Avenger: Avenger [supId=0, supName=Iron Man, supPower=Genius and money, firstName=Tony, lastName=Stark, powerLevel=66, homeBase=Home [homeBase=Hong Kong Offices, streetAddr=99 I am rich st. , city=HK, state=HK, zip=88888]] with a new home: Home [homeBase=Hong Kong Offices, streetAddr=99 I am rich st. , city=HK, state=HK, zip=88888]
