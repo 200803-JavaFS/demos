@@ -145,4 +145,40 @@ public class AvengerDAO implements IAvengerDAO {
 		return false;
 	}
 
+	@Override
+	public boolean addAvengerWithHome(Avenger a) {
+		try (Connection conn = ConnectionUtility.getConnection()){
+			
+			String sql = "BEGIN; "
+					+ "INSERT INTO homes (home_base, hb_st_addr, hb_city, hb_state, hb_zip)"
+					+ "VALUES (?, ?, ?, ?, ?);"
+					+ "INSERT INTO avengers (superhero_name, superhero_power, first_name, last_name, power_level, home_base_fk)"
+					+ "VALUES (?, ?, ?, ?, ?, ?);"
+					+ "COMMIT;";
+			
+			PreparedStatement statement = conn.prepareStatement(sql);
+			
+			Home h = a.getHomeBase();
+			
+			int index = 0;
+			statement.setString(++index, h.getHomeBase());
+			statement.setString(++index, h.getStreetAddr());
+			statement.setString(++index, h.getCity());
+			statement.setString(++index, h.getState());
+			statement.setString(++index, h.getZip());
+			statement.setString(++index, a.getSupName());
+			statement.setString(++index, a.getSupPower());
+			statement.setString(++index, a.getFirstName());
+			statement.setString(++index, a.getLastName());
+			statement.setInt(++index, a.getPowerLevel());
+			statement.setString(++index, h.getHomeBase());
+			
+			statement.execute();
+			return true;
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}
+		return false;
+	}
+
 }

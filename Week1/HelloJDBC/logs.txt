@@ -1,0 +1,7 @@
+2020-08-13 16:16:53 INFO  AvengerService:18 - Retrieving all avengers
+2020-08-13 16:29:54 INFO  AvengerService:23 - finding a Avenger with id 2
+2020-08-13 16:30:13 INFO  AvengerService:18 - Retrieving all avengers
+2020-08-13 16:32:07 INFO  AvengerService:23 - finding a Avenger with id 3
+2020-08-13 16:50:32 INFO  AvengerService:36 - Inserting Avenger: Avenger [supId=0, supName=Black Widow, supPower=Being Russian, firstName=Natasha, lastName=Romanov, powerLevel=9000, homeBase=null]
+2020-08-13 16:50:43 INFO  AvengerService:18 - Retrieving all avengers
+2020-08-13 16:56:24 INFO  AvengerService:18 - Retrieving all avengers

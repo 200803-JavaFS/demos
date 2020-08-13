@@ -16,4 +16,6 @@ public interface IAvengerDAO {
 	
 	public boolean deleteAvenger(int supId);
 
+	public boolean addAvengerWithHome(Avenger a);
+
 }
