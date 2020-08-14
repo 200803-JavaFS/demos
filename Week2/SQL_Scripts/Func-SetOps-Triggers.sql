@@ -61,6 +61,20 @@ EXECUTE PROCEDURE trigger_set_time();
 
 UPDATE avengers SET power_level = 3000 WHERE superhero_id = 5; 
 
+--UNION
+
+SELECT first_name, last_name FROM avengers UNION SELECT home_base, hb_city FROM homes; 
+
+SELECT home_base_fk FROM avengers UNION SELECT home_base FROM homes; 
+
+--ORDER BY
+SELECT * FROM avengers ORDER BY power_level DESC; 
+
+--GROUP BY
+SELECT SUM(power_level), home_base_fk FROM avengers GROUP BY home_base_fk ORDER BY sum DESC;
 
 
+--HAVING
+SELECT SUM(power_level), home_base_fk FROM avengers WHERE superhero_id > 1 GROUP BY home_base_fk 
+HAVING sum(power_level) < 1000 ORDER BY sum DESC;
 

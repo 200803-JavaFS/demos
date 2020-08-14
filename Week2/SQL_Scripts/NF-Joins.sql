@@ -74,7 +74,7 @@ CREATE TABLE homes (
 	hb_city VARCHAR(30),
 	hb_state VARCHAR(2),
 	hb_zip VARCHAR(5)
-)
+);
 
 CREATE TABLE avengers (
 	superhero_id SERIAL PRIMARY KEY, 
