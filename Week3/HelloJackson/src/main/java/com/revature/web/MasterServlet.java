@@ -1,5 +1,6 @@
 package com.revature.web;
 
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.Arrays;
 
@@ -9,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.revature.controllers.AvengerController;
+import com.revature.models.Avenger;
 
 public class MasterServlet extends HttpServlet {
 
@@ -43,7 +45,11 @@ public class MasterServlet extends HttpServlet {
 					if (portions.length == 2) {
 						int id = Integer.parseInt(portions[1]);
 						ac.getAvenger(res, id);
+					}else if (portions.length == 1){
+						ac.getAllAvengers(res);
 					}
+				} else if(req.getMethod().equals("POST")) {
+					ac.addAvenger(req, res);
 				}
 			}
 		} catch (NumberFormatException e) {
