@@ -10,11 +10,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.revature.controllers.AvengerController;
+import com.revature.controllers.LoginController;
 import com.revature.models.Avenger;
 
 public class MasterServlet extends HttpServlet {
 
 	private static AvengerController ac = new AvengerController();
+	private static LoginController lc = new LoginController();
 	
 	public MasterServlet() {
 		super();
@@ -51,7 +53,16 @@ public class MasterServlet extends HttpServlet {
 				} else if(req.getMethod().equals("POST")) {
 					ac.addAvenger(req, res);
 				}
+				break;
+			case "login":
+				lc.login(req, res);
+				break;
+			case "logout":
+				lc.logout(req, res);
+				break;
 			}
+			
+				
 		} catch (NumberFormatException e) {
 			e.printStackTrace();
 			res.getWriter().print("The id you provided is not an integer");
