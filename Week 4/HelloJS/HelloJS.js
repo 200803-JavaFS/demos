@@ -34,7 +34,7 @@ function funcTwo(y, callback) {
     callback(y);
 }
 
-console.log(q);
+
 funcTwo(9, funcOne);
 funcTwo(5, funcThree)
 
