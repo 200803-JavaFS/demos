@@ -31,6 +31,5 @@ function renderHTML(data) {
         poketype.append(data.types[1].type.name);
     }
     pokenum.innerText = data.id;
-
 }
 
