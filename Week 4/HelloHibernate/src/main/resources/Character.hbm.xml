@@ -12,7 +12,4 @@
 		<property name="gender" column="gender" type="string"/>
 		<property name="motive" column="motive" type="string"/>
 	</class> 
-
-
-
 </hibernate-mapping>
