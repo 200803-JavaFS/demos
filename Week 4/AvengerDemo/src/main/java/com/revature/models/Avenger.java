@@ -25,7 +25,7 @@ public class Avenger implements Serializable{
 	private String lastName;
 	private int powerLevel;
 	
-	@ManyToOne(fetch=FetchType.EAGER, cascade=CascadeType.ALL)
+	@ManyToOne(optional=true, fetch=FetchType.EAGER, cascade=CascadeType.ALL)
 	@JoinColumn(name="homeBase")
 	private Home homeBase;
 	
