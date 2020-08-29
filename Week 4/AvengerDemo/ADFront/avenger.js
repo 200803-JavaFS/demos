@@ -13,7 +13,8 @@ async function loginFunc() {
 
     let resp = await fetch(url+"login", {
         method: 'POST',
-        body: JSON.stringify(user)
+        body: JSON.stringify(user),
+        credentials : "include"
     })
 
     if(resp.status===200){
@@ -33,12 +34,14 @@ async function loginFunc() {
 async function findAllFunc() {
     const myHeaders = new Headers();
 
-    myHeaders.append('Access-Control-Allow-Credentials', true);
+    myHeaders.append("Origin", "corssucklol");
+
 
     let resp = await fetch(url+"avenger", {
-        mode: "no-cors",
         credentials: 'include',
-        headers: myHeaders
+        headers: {
+            Origin: "corssucks"
+        }
       });
 
     if(resp.status===200){

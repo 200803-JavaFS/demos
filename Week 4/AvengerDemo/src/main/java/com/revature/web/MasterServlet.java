@@ -38,11 +38,13 @@ public class MasterServlet extends HttpServlet {
 		String[] portions = URI.split("/");
 
 		System.out.println(Arrays.toString(portions));
-
+		if(portions.length==0) {
+			req.getRequestDispatcher("index.html").forward(req, res);;
+		}
 		try {
 			switch (portions[0]) {
 			case "avenger":
-				//if (req.getSession(false) != null && (boolean) req.getSession().getAttribute("loggedin")) {
+				if (req.getSession(false) != null && (boolean) req.getSession().getAttribute("loggedin")) {
 					if (req.getMethod().equals("GET")) {
 						if (portions.length == 2) {
 							int id = Integer.parseInt(portions[1]);
@@ -53,10 +55,10 @@ public class MasterServlet extends HttpServlet {
 					} else if (req.getMethod().equals("POST")) {
 						ac.addAvenger(req, res);
 					}
-//				} else {
-//					res.setStatus(403);
-//					res.getWriter().println("You must be logged in to do that!");
-//				}
+				} else {
+					res.setStatus(403);
+					res.getWriter().println("You must be logged in to do that!");
+				}
 				break;
 			case "login":
 				lc.login(req, res);
