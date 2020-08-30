@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.revature.models.Avenger;
+import com.revature.models.AvengerDTO;
 import com.revature.services.AvengerService;
 
 public class AvengerController {
@@ -50,7 +51,7 @@ public class AvengerController {
 		
 		System.out.println(body);
 		
-		Avenger a = om.readValue(body, Avenger.class);
+		AvengerDTO a = om.readValue(body, AvengerDTO.class);
 		
 		System.out.println(a);
 		
