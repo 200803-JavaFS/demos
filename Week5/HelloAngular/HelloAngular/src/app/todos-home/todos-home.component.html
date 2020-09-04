@@ -1,23 +1,29 @@
 <div class="grid-container">
-    <div class="todo-card">
-        <h2>Todo #1</h2>
-        <p>Make a cup of coffee before I practice my Java!</p>
-        <p>Status: Incomplete</p>
+    <div [hidden]="visibility" class="todo-card">
+        <h2>Todo #{{todos[0].id}}</h2>
+        <p>{{todos[0].content}}</p>
+        <p>Status: {{todos[0].status}}</p>
+        <input [(ngModel)]="todos[0].content" id="updateBox1"/>
     </div>
-    <div class="todo-card">
-        <h2>Todo #2</h2>
-        <p>Merge sort all of my socks before laundry day. P.S. I hate laundry days!</p>
-        <p>Status: Incomplete</p>
+    <div [hidden]="visibility" class="todo-card">
+        <h2>Todo #{{todo2.id}}</h2>
+        <p>{{todo2.content}}</p>
+        <p>Status: {{todo2.status}}</p>
+        <input [(ngModel)]="todos[1].content" id="updateBox2"/>
     </div>
-    <div class="todo-card">
-        <h2>Todo #3</h2>
-        <p>Feed my pet python a snack.</p>
-        <p>Status: Incomplete</p>
+    <div [hidden]="visibility" class="todo-card">
+        <h2>Todo #{{todo3.id}}</h2>
+        <p>{{todo3.content}}</p>
+        <p>Status: {{todo3.status}}</p>
+        <input [(ngModel)]="todos[2].content" id="updateBox3"/>
     </div>
-    <div class="todo-card">
-        <h2>Todo #4</h2>
-        <p>Have another cup of coffee before I go rehearse the script for my upcoming play: JavaScript.</p>
-        <p>Status: Incomplete</p>
+    <div [hidden]="visibility" class="todo-card">
+        <h2>Todo #{{todo4.id}}</h2>
+        <p>{{todo4.content}}</p>
+        <p>Status: {{todo4.status}}</p>
+        <input [(ngModel)]="todos[3].content" id="updateBox4"/>
     </div>
-    </div>
-    
+</div>
+<br>
+<br>
+<button (click)="toggleVis()">Click to Show/Hide</button>

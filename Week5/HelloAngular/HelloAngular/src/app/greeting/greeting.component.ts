@@ -9,6 +9,8 @@ export class GreetingComponent implements OnInit {
   name:string;
   constructor() { }
 
+  
+
   ngOnInit(): void {
   }
 
