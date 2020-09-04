@@ -1,27 +1,11 @@
+<app-greeting></app-greeting>
+
 <div class="grid-container">
-    <div [hidden]="visibility" class="todo-card">
-        <h2>Todo #{{todos[0].id}}</h2>
-        <p>{{todos[0].content}}</p>
-        <p>Status: {{todos[0].status}}</p>
-        <input [(ngModel)]="todos[0].content" id="updateBox1"/>
-    </div>
-    <div [hidden]="visibility" class="todo-card">
-        <h2>Todo #{{todo2.id}}</h2>
-        <p>{{todo2.content}}</p>
-        <p>Status: {{todo2.status}}</p>
-        <input [(ngModel)]="todos[1].content" id="updateBox2"/>
-    </div>
-    <div [hidden]="visibility" class="todo-card">
-        <h2>Todo #{{todo3.id}}</h2>
-        <p>{{todo3.content}}</p>
-        <p>Status: {{todo3.status}}</p>
-        <input [(ngModel)]="todos[2].content" id="updateBox3"/>
-    </div>
-    <div [hidden]="visibility" class="todo-card">
-        <h2>Todo #{{todo4.id}}</h2>
-        <p>{{todo4.content}}</p>
-        <p>Status: {{todo4.status}}</p>
-        <input [(ngModel)]="todos[3].content" id="updateBox4"/>
+    <div *ngFor="let todo of todos" [hidden]="visibility" class="todo-card">
+        <h2>Todo #{{todo.id}}</h2>
+        <p>{{todo.content}}</p>
+        <p>Status: {{todo.status}}</p>
+        <input [(ngModel)]="todo.content" id="updateBox{{todo.id}}"/>
     </div>
 </div>
 <br>
