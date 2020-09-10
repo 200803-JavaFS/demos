@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TodosService } from '../todos.service';
+import { Todo } from '../models/todo';
 
 @Component({
   selector: 'app-todos-home',
@@ -12,15 +13,22 @@ export class TodosHomeComponent implements OnInit {
 
   visibility:boolean = true;
 
-  todos:Object[];
+  todos:Todo[];
 
   
 
 
   ngOnInit(): void {
-    this.todos=this.todoser.getTodos();
-  }
-
+    this.todoser.getTodos().subscribe(
+      (data) => {
+        this.todos =data;
+        console.log(this.todos);
+      }, () => {
+        console.log("something went wrong");
+      } 
+    )
+    }
+    
   toggleVis(){
     this.visibility = !this.visibility;
   }

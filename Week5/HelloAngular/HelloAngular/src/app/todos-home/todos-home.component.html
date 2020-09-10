@@ -3,8 +3,9 @@
 <div class="grid-container">
     <div *ngFor="let todo of todos" [hidden]="visibility" class="todo-card">
         <h2>Todo #{{todo.id}}</h2>
-        <p>{{todo.content}}</p>
-        <p>Status: {{todo.status}}</p>
+        <p>{{todo.title}}</p>
+        <p>{{todo.createdOn}}</p>
+        <p>Status: {{todo.completed}}</p>
         <input [(ngModel)]="todo.content" id="updateBox{{todo.id}}"/>
     </div>
 </div>

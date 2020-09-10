@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { TodosHomeComponent } from './todos-home/todos-home.component';
 import { TodosBannerComponent } from './todos-banner/todos-banner.component';
 import { GreetingComponent } from './greeting/greeting.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { GreetingComponent } from './greeting/greeting.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

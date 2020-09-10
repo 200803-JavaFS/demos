@@ -1,41 +1,21 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { Todo } from './models/todo';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TodosService {
-  todo1 = {
-    id: 1,
-    content: "Make a cup of coffee before I practice my Java!",
-    status: "Incomplete"
-  }
-
-  todo2 = {
-    id: 2,
-    content: "Merge sort all of my socks before laundry day. P.S. I hate laundry days!",
-    status: "Incomplete"
-  }
-
-  todo3 = {
-    id: 3,
-    content: "Feed my pet python a snack.",
-    status: "Incomplete"
-  }
-
-  todo4 = {
-    id: 4,
-    content: "Have another cup of coffee before I go rehearse the script for my upcoming play: JavaScript.",
-    status: "Incomplete"
-  }
 
 
 
-  constructor() { }
+
+  constructor(private http:HttpClient) { }
   
-getTodos(): Object[] {
+getTodos(): Observable<Todo[]> {
   
-    let todos = [this.todo1, this.todo2, this.todo3, this.todo4];
-    return todos;
+    return this.http.get("http://34.82.182.44/todos") as Observable<Todo[]>;
   }
 
 }
