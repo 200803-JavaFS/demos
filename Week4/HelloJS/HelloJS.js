@@ -65,3 +65,5 @@ var add10 = adder(10);
 console.log(add5(7));
 console.log(add10(7));
 
+
+
