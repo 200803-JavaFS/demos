@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+        <input class="col" type="number" [(ngModel)]="input">
+        <button class="btn btn-primary" (click)="getPoke()">Favorite Poke?</button>
+    </div>
+
+    <table class="table" *ngIf="poke">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Type</th>
+                <th scope="col">Sprite</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{poke.name}}</td>
+                <td>{{poke.types[0].type.name}}<span *ngIf="poke.types.length>1">{{poke.types[1].type.name | type}}</span></td>
+                <td><img src="{{poke.sprites.front_default}}"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
+import { PokesComponent } from './components/pokes/pokes.component';
 
 const routes: Routes = [{
   path:'home',
@@ -9,6 +10,10 @@ const routes: Routes = [{
 {
   path: '',
   component: HomeComponent
+},
+{
+  path:'pokemon',
+  component:PokesComponent
 }];
 
 @NgModule({
