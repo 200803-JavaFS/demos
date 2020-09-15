@@ -11,8 +11,8 @@ public class Driver {
 
 	public static void main(String[] args) {
 		// Created an Application Context Container.
-		//ApplicationContext ac = new ClassPathXmlApplicationContext("applicationContext.xml");
-		ApplicationContext ac = new AnnotationConfigApplicationContext(Config.class);
+		ApplicationContext ac = new ClassPathXmlApplicationContext("applicationContext.xml");
+		//ApplicationContext ac = new AnnotationConfigApplicationContext(Config.class);
 		
 		
 		// Asked the Container for a user object.

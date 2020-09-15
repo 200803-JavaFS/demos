@@ -1,5 +1,9 @@
 package com.revature.models;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 public class User {
 	
 	private int id;
@@ -10,7 +14,8 @@ public class User {
 		super();
 	}
 	
-	
+	//This provides dependency injection, since it is above the constructor, Spring will use constructor injection. 
+	@Autowired
 	public User(Account acc) {
 		super();
 		this.acc = acc;
@@ -84,6 +89,8 @@ public class User {
 		return acc;
 	}
 
+	//This will do setter injection
+	//@Autowired
 	public void setAcc(Account acc) {
 		this.acc = acc;
 	} 

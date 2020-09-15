@@ -1,5 +1,9 @@
 package com.revature.models;
 
+import org.springframework.stereotype.Controller;
+
+//This is not a controller, but since the functionality of stereotype annotations is the same it doesn't matter to Spring. 
+@Controller
 public class Account {
 	
 	private double amount;
