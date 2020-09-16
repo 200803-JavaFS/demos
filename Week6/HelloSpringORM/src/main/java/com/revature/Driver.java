@@ -30,6 +30,7 @@ public class Driver {
 		u.setFriends(l);
 		
 		dao.update(u);
+		
 		System.out.println(dao.findAll());
  
 	}
