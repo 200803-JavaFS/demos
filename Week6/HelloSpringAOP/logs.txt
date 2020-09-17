@@ -44,3 +44,15 @@ com.revature.exceptions.SocialDistancingException: null
 2020-09-17 13:08:11 INFO  LoggingAspect:33 - com.revature.repositories.AvengerDAO@74bf1791 invoked String com.revature.repositories.AvengerDAO.fight(Avenger,String,double) returning Scarlett Witch attacks a bad guy with an energy blast from 15.0 feet away.
 2020-09-17 13:08:11 INFO  LoggingAspect:44 - Captian America is about to throw down.
 2020-09-17 13:08:11 WARN  LoggingAspect:47 - Captian America is violating proper social distancing; so much for being a hero.
+2020-09-17 14:05:43 INFO  LoggingAspect:24 - Avenger [supID=0, supName=null, supPower=null, firstName=null, lastName=null, powerLevel=0] invoked void com.revature.models.Avenger.setFirstName(String)
+2020-09-17 14:05:43 INFO  LoggingAspect:24 - Avenger [supID=0, supName=null, supPower=null, firstName=Wanda, lastName=null, powerLevel=0] invoked void com.revature.models.Avenger.setLastName(String)
+2020-09-17 14:05:43 INFO  LoggingAspect:24 - Avenger [supID=0, supName=null, supPower=null, firstName=Wanda, lastName=Maximoff, powerLevel=0] invoked void com.revature.models.Avenger.setSupID(int)
+2020-09-17 14:05:43 INFO  LoggingAspect:24 - Avenger [supID=8, supName=null, supPower=null, firstName=Wanda, lastName=Maximoff, powerLevel=0] invoked void com.revature.models.Avenger.setPowerLevel(int)
+2020-09-17 14:05:43 INFO  LoggingAspect:24 - Avenger [supID=8, supName=null, supPower=null, firstName=Wanda, lastName=Maximoff, powerLevel=300] invoked void com.revature.models.Avenger.setSupName(String)
+2020-09-17 14:05:43 INFO  LoggingAspect:24 - Avenger [supID=8, supName=Scarlett Witch, supPower=null, firstName=Wanda, lastName=Maximoff, powerLevel=300] invoked void com.revature.models.Avenger.setSupPower(String)
+2020-09-17 14:05:43 INFO  LoggingAspect:24 - Avenger [supID=8, supName=Scarlett Witch, supPower=Magic Hands, firstName=Wanda, lastName=Maximoff, powerLevel=300] invoked String com.revature.models.Avenger.getSupName()
+2020-09-17 14:05:43 INFO  LoggingAspect:40 - Scarlett Witch is about to throw down.
+2020-09-17 14:05:43 INFO  LoggingAspect:24 - Avenger [supID=8, supName=Scarlett Witch, supPower=Magic Hands, firstName=Wanda, lastName=Maximoff, powerLevel=300] invoked String com.revature.models.Avenger.getSupName()
+2020-09-17 14:05:43 INFO  LoggingAspect:29 - com.revature.repositories.AvengerDAO@1339e7aa invoked String com.revature.repositories.AvengerDAO.fight(Avenger,String,double) returning Scarlett Witch attacks a bad guy with an energy blast from 15.0 feet away.
+2020-09-17 14:05:43 INFO  LoggingAspect:40 - Captian America is about to throw down.
+2020-09-17 14:05:43 WARN  LoggingAspect:43 - Captian America is violating proper social distancing; so much for being a hero.

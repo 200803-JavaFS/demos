@@ -19,10 +19,6 @@ public class LoggingAspect {
 	
 	private static Logger log = LogManager.getLogger(LoggingAspect.class);
 	
-	
-//	@Pointcut("within(com.revature.models.*)")
-//	public void logMods() {}
-//	
 	@Before("within(com.revature.models.*)")
 	public void logModelMethods(JoinPoint jp) {
 		log.info(jp.getTarget() + " invoked " + jp.getSignature());
@@ -49,6 +45,5 @@ public class LoggingAspect {
 		} else {
 			return (String) pjp.proceed();
 		}
-	}
-	
+	}	
 }
