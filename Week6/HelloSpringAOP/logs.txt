@@ -1,0 +1,46 @@
+2020-09-17 12:28:12 INFO  LoggingAspect:40 - Scarlett Witch is about to throw down.
+2020-09-17 12:28:12 INFO  LoggingAspect:29 - com.revature.repositories.AvengerDAO@5be46f9d invoked String com.revature.repositories.AvengerDAO.fight(Avenger,String,double) returning Scarlett Witch attacks a bad guy with an energy blast from 15.0 feet away.
+2020-09-17 12:37:42 INFO  LoggingAspect:27 - com.revature.repositories.AvengerDAO@1984b1f invoked String com.revature.repositories.AvengerDAO.fight(Avenger,String,double) returning Scarlett Witch attacks a bad guy with an energy blast from 15.0 feet away.
+2020-09-17 12:42:01 INFO  LoggingAspect:27 - com.revature.repositories.AvengerDAO@46b61c56 invoked String com.revature.repositories.AvengerDAO.fight(Avenger,String,double) returning Scarlett Witch attacks a bad guy with an energy blast from 15.0 feet away.
+2020-09-17 12:43:44 INFO  LoggingAspect:27 - com.revature.repositories.AvengerDAO@46b61c56 invoked String com.revature.repositories.AvengerDAO.fight(Avenger,String,double) returning Scarlett Witch attacks a bad guy with an energy blast from 15.0 feet away.
+2020-09-17 12:47:18 INFO  LoggingAspect:28 - com.revature.repositories.AvengerDAO@1b75c2e3 invoked String com.revature.repositories.AvengerDAO.fight(Avenger,String,double) returning Scarlett Witch attacks a bad guy with an energy blast from 15.0 feet away.
+2020-09-17 12:47:18 WARN  LoggingAspect:33 - com.revature.repositories.AvengerDAO@1b75c2e3 invoked String com.revature.repositories.AvengerDAO.fight(Avenger,String,double) throwing class com.revature.exceptions.SocialDistancingException
+com.revature.exceptions.SocialDistancingException: null
+	at com.revature.repositories.AvengerDAO.fight(AvengerDAO.java:42) ~[classes/:?]
+	at com.revature.repositories.AvengerDAO$$FastClassBySpringCGLIB$$ce116f93.invoke(<generated>) ~[classes/:?]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771) ~[spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) ~[spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:62) [spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) [spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) [spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:55) [spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) [spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) [spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:95) [spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) [spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749) [spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691) [spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at com.revature.repositories.AvengerDAO$$EnhancerBySpringCGLIB$$edd7dbf0.fight(<generated>) [classes/:?]
+	at com.revature.Driver.main(Driver.java:28) [classes/:?]
+2020-09-17 12:54:27 INFO  LoggingAspect:43 - Scarlett Witch is about to throw down.
+2020-09-17 12:54:27 INFO  LoggingAspect:32 - com.revature.repositories.AvengerDAO@65b104b9 invoked String com.revature.repositories.AvengerDAO.fight(Avenger,String,double) returning Scarlett Witch attacks a bad guy with an energy blast from 15.0 feet away.
+2020-09-17 12:54:27 INFO  LoggingAspect:43 - Captian America is about to throw down.
+2020-09-17 12:54:27 WARN  LoggingAspect:46 - Captian America is violating proper social distancing; so much for being a hero.
+2020-09-17 13:07:14 INFO  LoggingAspect:43 - Scarlett Witch is about to throw down.
+2020-09-17 13:07:14 INFO  LoggingAspect:32 - com.revature.repositories.AvengerDAO@65b104b9 invoked String com.revature.repositories.AvengerDAO.fight(Avenger,String,double) returning Scarlett Witch attacks a bad guy with an energy blast from 15.0 feet away.
+2020-09-17 13:07:14 INFO  LoggingAspect:43 - Captian America is about to throw down.
+2020-09-17 13:07:14 WARN  LoggingAspect:46 - Captian America is violating proper social distancing; so much for being a hero.
+2020-09-17 13:08:11 INFO  LoggingAspect:28 - Avenger [supID=0, supName=null, supPower=null, firstName=null, lastName=null, powerLevel=0] invoked void com.revature.models.Avenger.setFirstName(String)
+2020-09-17 13:08:11 INFO  LoggingAspect:28 - Avenger [supID=0, supName=null, supPower=null, firstName=Wanda, lastName=null, powerLevel=0] invoked void com.revature.models.Avenger.setLastName(String)
+2020-09-17 13:08:11 INFO  LoggingAspect:28 - Avenger [supID=0, supName=null, supPower=null, firstName=Wanda, lastName=Maximoff, powerLevel=0] invoked void com.revature.models.Avenger.setSupID(int)
+2020-09-17 13:08:11 INFO  LoggingAspect:28 - Avenger [supID=8, supName=null, supPower=null, firstName=Wanda, lastName=Maximoff, powerLevel=0] invoked void com.revature.models.Avenger.setPowerLevel(int)
+2020-09-17 13:08:11 INFO  LoggingAspect:28 - Avenger [supID=8, supName=null, supPower=null, firstName=Wanda, lastName=Maximoff, powerLevel=300] invoked void com.revature.models.Avenger.setSupName(String)
+2020-09-17 13:08:11 INFO  LoggingAspect:28 - Avenger [supID=8, supName=Scarlett Witch, supPower=null, firstName=Wanda, lastName=Maximoff, powerLevel=300] invoked void com.revature.models.Avenger.setSupPower(String)
+2020-09-17 13:08:11 INFO  LoggingAspect:28 - Avenger [supID=8, supName=Scarlett Witch, supPower=Magic Hands, firstName=Wanda, lastName=Maximoff, powerLevel=300] invoked String com.revature.models.Avenger.getSupName()
+2020-09-17 13:08:11 INFO  LoggingAspect:44 - Scarlett Witch is about to throw down.
+2020-09-17 13:08:11 INFO  LoggingAspect:28 - Avenger [supID=8, supName=Scarlett Witch, supPower=Magic Hands, firstName=Wanda, lastName=Maximoff, powerLevel=300] invoked String com.revature.models.Avenger.getSupName()
+2020-09-17 13:08:11 INFO  LoggingAspect:33 - com.revature.repositories.AvengerDAO@74bf1791 invoked String com.revature.repositories.AvengerDAO.fight(Avenger,String,double) returning Scarlett Witch attacks a bad guy with an energy blast from 15.0 feet away.
+2020-09-17 13:08:11 INFO  LoggingAspect:44 - Captian America is about to throw down.
+2020-09-17 13:08:11 WARN  LoggingAspect:47 - Captian America is violating proper social distancing; so much for being a hero.
