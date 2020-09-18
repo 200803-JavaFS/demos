@@ -13,6 +13,12 @@ import org.springframework.stereotype.Component;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
 @Component
 @Entity
 public class Trainer {
@@ -39,10 +45,6 @@ public class Trainer {
 		this.party = party;
 	}
 
-	public Trainer() {
-		super();
-	}
-
 	public int gettId() {
 		return tId;
 	}
@@ -67,45 +69,10 @@ public class Trainer {
 		this.party = party;
 	}
 
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((name == null) ? 0 : name.hashCode());
-		result = prime * result + ((party == null) ? 0 : party.hashCode());
-		result = prime * result + tId;
-		return result;
+	public Trainer() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Trainer other = (Trainer) obj;
-		if (name == null) {
-			if (other.name != null)
-				return false;
-		} else if (!name.equals(other.name))
-			return false;
-		if (party == null) {
-			if (other.party != null)
-				return false;
-		} else if (!party.equals(other.party))
-			return false;
-		if (tId != other.tId)
-			return false;
-		return true;
-	}
-
-	@Override
-	public String toString() {
-		return "Trainer [tId=" + tId + ", name=" + name + ", party=" + party + "]";
-	}
+ 
 	
-	
-
 }
