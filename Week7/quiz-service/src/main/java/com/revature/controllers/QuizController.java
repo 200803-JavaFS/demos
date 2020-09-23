@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.circuitbreaker.CircuitBreakerFactory;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -19,6 +21,9 @@ import com.revature.repositories.QuizRepository;
 @RestController
 public class QuizController {
 
+	@Autowired
+	private CircuitBreakerFactory<?, ?> cbFact;
+	
 	@Autowired
 	private QuizRepository quizDao;
 
@@ -70,20 +75,38 @@ public class QuizController {
 
 	@GetMapping("/cards")
 	public ResponseEntity<List<Flashcard>> getCards() {
-		List<Flashcard> all = fClient.findAll();
+//		List<Flashcard> all = fClient.findAll();
+//		
+//		if (all.isEmpty()) {
+//			return ResponseEntity.noContent().build();
+//		}
+//
+//		return ResponseEntity.ok(all);
 		
-		if (all.isEmpty()) {
-			return ResponseEntity.noContent().build();
-		}
-
-		return ResponseEntity.ok(all);
+		return cbFact.create("flashcard-cards").run(
+				() -> ResponseEntity.ok(fClient.findAll()),
+				throwable -> getCardsFallback()
+				);
+				
+	}
+	
+	private ResponseEntity<List<Flashcard>> getCardsFallback(){
+		return ResponseEntity.status(HttpStatus.SERVICE_UNAVAILABLE).build();
 	}
 	
 	@GetMapping("/port")
 	public ResponseEntity<String> retrievePort() {
-		String info = fClient.retrievePort();
+//		String info = fClient.retrievePort();
+//		
+//		return ResponseEntity.ok(info);
 		
-		return ResponseEntity.ok(info);
+		return cbFact.create("flashcard-port").run(
+				() -> ResponseEntity.ok(fClient.retrievePort()),
+				throwable -> retrievePortFallback()
+				);
 	}
 	
+	private ResponseEntity<String> retrievePortFallback(){
+		return ResponseEntity.status(HttpStatus.SERVICE_UNAVAILABLE).body("Flashcard Service is down.");
+	}
 }

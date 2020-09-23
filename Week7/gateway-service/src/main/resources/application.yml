@@ -13,6 +13,10 @@ spring:
         predicates:        - Path=/flashcard/**
         filters:
         - StripPrefix=1
+        - name: CircuitBreaker
+          args:
+            name: flashcard-fallback
+            fallbackUri: forward:/fallback/flashcard
       #=========================
       - id: quiz
         uri: lb://quiz
