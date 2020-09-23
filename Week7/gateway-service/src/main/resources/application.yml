@@ -9,9 +9,13 @@ spring:
       routes:
       #=========================
       - id: flashcard
-        uri: http://localhost:8081
+        uri: lb://flashcard
         predicates:        - Path=/flashcard/**
+        filters:
+        - StripPrefix=1
       #=========================
       - id: quiz
-        uri: http://localhost:8082
-        predicates:        - Path=/quiz/**
+        uri: lb://quiz
+        predicates:        - Path=/quiz/**
+        filters:
+        - StripPrefix=1
