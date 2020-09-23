@@ -1,0 +1,17 @@
+server:
+  port: 8080
+  
+spring:
+  application.name: gateway 
+  cloud:
+    gateway:
+      default-filters:      - PrefixPath=/
+      routes:
+      #=========================
+      - id: flashcard
+        uri: http://localhost:8081
+        predicates:        - Path=/flashcard/**
+      #=========================
+      - id: quiz
+        uri: http://localhost:8082
+        predicates:        - Path=/quiz/**
